@@ -7,6 +7,7 @@ using DataAccess.Entities.Mapping.Character;
 using DataAccess.Entities.Diagnosis;
 using DataAccess.Entities.Center;
 using DataAccess.Entities.Staff;
+using DataAccess.Entities.Examination;
 
 namespace DataAccess.Entities
 {
@@ -42,6 +43,12 @@ namespace DataAccess.Entities
         public DbSet<MedicalField> MedicalFields { get; set; }
         public DbSet<Physician> Physicians { get; set; }
         public DbSet<PhysicianGrade> PhysicianGrades { get; set; }
+
+        //Examination
+        public DbSet<Examination.Examination> Examinations { get; set; }
+        public DbSet<ExaminationType> ExaminationTypes { get; set; }
+        public DbSet<Observation> Observations { get; set; }
+        public DbSet<ObservationType> ObservationTypes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
