@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DataAccess.Entities.Center;
+using DataAccess.Entities.Character;
+using DataAccess.Entities.Staff;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -13,7 +16,11 @@ namespace DataAccess.Entities.Character
     {
         [Key]
         public int Id { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         public virtual Person Person { get; set; }
+        public virtual Physician Physician { get; set; }
+        public virtual MedicalCenter MedicalCenter { get; set; }
     }
 }
