@@ -4,6 +4,7 @@ using System.Data.Entity.Validation;
 using System.Diagnostics;
 using System.IO;
 using DataAccess.Entities;
+using DataAccess.Entities.Character;
 using DataAccess.Repository;
 
 namespace DataAccess.UnitOfWork

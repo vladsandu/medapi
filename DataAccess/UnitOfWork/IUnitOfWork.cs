@@ -1,4 +1,5 @@
 ﻿using DataAccess.Entities;
+using DataAccess.Entities.Character;
 using DataAccess.Repository;
 
 namespace DataAccess.UnitOfWork
