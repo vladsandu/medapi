@@ -60,6 +60,10 @@
     <Compile Include="Entities\Mapping\Character\PersonMap.cs" />
     <Compile Include="Entities\MedContext.cs" />
     <Compile Include="Entities\Character\Person.cs" />
+    <Compile Include="Entities\Staff\Contract.cs" />
+    <Compile Include="Entities\Staff\MedicalField.cs" />
+    <Compile Include="Entities\Staff\Physician.cs" />
+    <Compile Include="Entities\Staff\PhysicianGrade.cs" />
     <Compile Include="Migrations\201704080502083_initial.cs" />
     <Compile Include="Migrations\201704080502083_initial.Designer.cs">
       <DependentUpon>201704080502083_initial.cs</DependentUpon>
@@ -79,6 +83,10 @@
     <Compile Include="Migrations\201704080638570_UpdateSchemaCharacterToUppercase.cs" />
     <Compile Include="Migrations\201704080638570_UpdateSchemaCharacterToUppercase.Designer.cs">
       <DependentUpon>201704080638570_UpdateSchemaCharacterToUppercase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704080831139_AddStaffSchema.cs" />
+    <Compile Include="Migrations\201704080831139_AddStaffSchema.Designer.cs">
+      <DependentUpon>201704080831139_AddStaffSchema.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704080638570_UpdateSchemaCharacterToUppercase.resx">
       <DependentUpon>201704080638570_UpdateSchemaCharacterToUppercase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704080831139_AddStaffSchema.resx">
+      <DependentUpon>201704080831139_AddStaffSchema.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
