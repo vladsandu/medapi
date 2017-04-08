@@ -57,6 +57,13 @@
     <Compile Include="Entities\Diagnosis\ConditionCategory.cs" />
     <Compile Include="Entities\Diagnosis\Diagnosis.cs" />
     <Compile Include="Entities\Diagnosis\Type.cs" />
+    <Compile Include="Entities\Drug\ActiveIngredient.cs" />
+    <Compile Include="Entities\Drug\ActiveIngredientType.cs" />
+    <Compile Include="Entities\Drug\AdministrationSchema.cs" />
+    <Compile Include="Entities\Drug\AdministrationType.cs" />
+    <Compile Include="Entities\Drug\Brand.cs" />
+    <Compile Include="Entities\Drug\Drug.cs" />
+    <Compile Include="Entities\Drug\DrugPrescription.cs" />
     <Compile Include="Entities\Examination\Examination.cs" />
     <Compile Include="Entities\Examination\ExaminationType.cs" />
     <Compile Include="Entities\Examination\Observation.cs" />
@@ -80,6 +87,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

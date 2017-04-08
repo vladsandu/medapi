@@ -9,6 +9,7 @@ using DataAccess.Entities.Center;
 using DataAccess.Entities.Staff;
 using DataAccess.Entities.Examination;
 using DataAccess.Entities.Prescription;
+using DataAccess.Entities.Drug;
 
 namespace DataAccess.Entities
 {
@@ -55,6 +56,15 @@ namespace DataAccess.Entities
         public DbSet<Prescription.Prescription> Prescriptions { get; set; }
         public DbSet<PrescriptionType> PrescriptionTypes { get; set; }
         public DbSet<PrescriptionStatus> PrescriptionStatuses { get; set; }
+
+        //Drug
+        public DbSet<ActiveIngredient> ActiveIngredients { get; set; }
+        public DbSet<ActiveIngredientType> ActiveIngredientTypes { get; set; }
+        public DbSet<AdministrationSchema> AdministrationSchemas { get; set; }
+        public DbSet<AdministrationType> AdministrationTypes { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Drug.Drug> Drugs { get; set; }
+        public DbSet<DrugPrescription> DrugPrescriptions { get; set; }
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
