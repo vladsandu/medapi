@@ -8,7 +8,7 @@ namespace DataAccess.Entities.Mapping.Character
         public PersonMap()
         {
             HasKey(t => t.Id);
-            ToTable("Person", "character");
+            ToTable("Person", "Character");
         }
     }
 }

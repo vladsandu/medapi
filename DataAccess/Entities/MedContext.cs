@@ -4,7 +4,6 @@ using DataAccess.Entities.Character;
 using DataAccess.Entities.Contact;
 using DataAccess.Entities.Mapping;
 using DataAccess.Entities.Mapping.Character;
-using DataAccess.Entities.Mapping.Contact;
 using DataAccess.Entities.Diagnosis;
 using DataAccess.Entities.Center;
 
@@ -38,11 +37,6 @@ namespace DataAccess.Entities
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             modelBuilder.Configurations.Add(new PersonMap());
-            modelBuilder.Configurations.Add(new InsuranceStatusMap());
-            modelBuilder.Configurations.Add(new NationalityMap());
-
-            modelBuilder.Configurations.Add(new ContactDetailsMap());
-            modelBuilder.Configurations.Add(new CityMap());
         }
     }
 }

@@ -57,11 +57,7 @@
     <Compile Include="Entities\Diagnosis\ConditionCategory.cs" />
     <Compile Include="Entities\Diagnosis\Diagnosis.cs" />
     <Compile Include="Entities\Diagnosis\Type.cs" />
-    <Compile Include="Entities\Mapping\Character\InsuranceStatusMap.cs" />
-    <Compile Include="Entities\Mapping\Character\NationalityMap.cs" />
     <Compile Include="Entities\Mapping\Character\PersonMap.cs" />
-    <Compile Include="Entities\Mapping\Contact\CityMap.cs" />
-    <Compile Include="Entities\Mapping\Contact\ContactDetailsMap.cs" />
     <Compile Include="Entities\MedContext.cs" />
     <Compile Include="Entities\Character\Person.cs" />
     <Compile Include="Migrations\201704080502083_initial.cs" />
@@ -79,6 +75,10 @@
     <Compile Include="Migrations\201704080635406_AddCenterSchema.cs" />
     <Compile Include="Migrations\201704080635406_AddCenterSchema.Designer.cs">
       <DependentUpon>201704080635406_AddCenterSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704080638570_UpdateSchemaCharacterToUppercase.cs" />
+    <Compile Include="Migrations\201704080638570_UpdateSchemaCharacterToUppercase.Designer.cs">
+      <DependentUpon>201704080638570_UpdateSchemaCharacterToUppercase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704080635406_AddCenterSchema.resx">
       <DependentUpon>201704080635406_AddCenterSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704080638570_UpdateSchemaCharacterToUppercase.resx">
+      <DependentUpon>201704080638570_UpdateSchemaCharacterToUppercase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
