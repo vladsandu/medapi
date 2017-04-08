@@ -64,6 +64,9 @@
     <Compile Include="Entities\Mapping\Character\PersonMap.cs" />
     <Compile Include="Entities\MedContext.cs" />
     <Compile Include="Entities\Character\Person.cs" />
+    <Compile Include="Entities\Prescription\Prescription.cs" />
+    <Compile Include="Entities\Prescription\PrescriptionStatus.cs" />
+    <Compile Include="Entities\Prescription\PrescriptionType.cs" />
     <Compile Include="Entities\Staff\Contract.cs" />
     <Compile Include="Entities\Staff\MedicalField.cs" />
     <Compile Include="Entities\Staff\Physician.cs" />

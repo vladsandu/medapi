@@ -8,6 +8,7 @@ using DataAccess.Entities.Diagnosis;
 using DataAccess.Entities.Center;
 using DataAccess.Entities.Staff;
 using DataAccess.Entities.Examination;
+using DataAccess.Entities.Prescription;
 
 namespace DataAccess.Entities
 {
@@ -50,6 +51,11 @@ namespace DataAccess.Entities
         public DbSet<Observation> Observations { get; set; }
         public DbSet<ObservationType> ObservationTypes { get; set; }
 
+        //Prescription
+        public DbSet<Prescription.Prescription> Prescriptions { get; set; }
+        public DbSet<PrescriptionType> PrescriptionTypes { get; set; }
+        public DbSet<PrescriptionStatus> PrescriptionStatuses { get; set; }
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
