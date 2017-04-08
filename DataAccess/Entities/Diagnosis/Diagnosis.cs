@@ -15,11 +15,10 @@ namespace DataAccess.Entities.Diagnosis
         [Key]
         public int Id { get; set; }
         
-        public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string Observations { get; set; }
 
         public virtual Condition Condition { get; set; }
-        public virtual Patient Patient { get; set; }
+        public virtual Examination.Examination Examination { get; set; }
     }
 }
