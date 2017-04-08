@@ -53,6 +53,7 @@
     <Compile Include="Entities\Character\Patient.cs" />
     <Compile Include="Entities\Contact\City.cs" />
     <Compile Include="Entities\Contact\ContactDetails.cs" />
+    <Compile Include="Entities\Contact\Country.cs" />
     <Compile Include="Entities\Diagnosis\Condition.cs" />
     <Compile Include="Entities\Diagnosis\ConditionCategory.cs" />
     <Compile Include="Entities\Diagnosis\Diagnosis.cs" />

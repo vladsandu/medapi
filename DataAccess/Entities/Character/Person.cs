@@ -8,10 +8,6 @@ namespace DataAccess.Entities.Character
     public class Person
     {
         public int Id { get; set; }
-        public int InsuranceStatusId { get; set; }
-        public int NationalityId { get; set; }
-        public int ContactDetailsId { get; set; }
-
         public int Cnp { get; set; }
         public byte Sex { get; set; }
         public string FirstName { get; set; }
