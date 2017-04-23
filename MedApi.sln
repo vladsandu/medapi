@@ -1,18 +1,32 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedApi", "MedApi\MedApi.csproj", "{F024DC76-38DF-4844-A519-4E056A114F33}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3A1C2E8A-D2E1-4A21-8414-1AA1BEBCBAFD} = {3A1C2E8A-D2E1-4A21-8414-1AA1BEBCBAFD}
+		{720F91AF-4B3C-47D9-A03B-017A37FC8BB5} = {720F91AF-4B3C-47D9-A03B-017A37FC8BB5}
+		{8BDAF6D9-CB9C-45DC-90F8-CADCBDB823C2} = {8BDAF6D9-CB9C-45DC-90F8-CADCBDB823C2}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedApi.UnitTests", "MedApi.UnitTests\MedApi.UnitTests.csproj", "{353DF139-CA01-4C4F-AF68-1B8238DF637B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{3A1C2E8A-D2E1-4A21-8414-1AA1BEBCBAFD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{720F91AF-4B3C-47D9-A03B-017A37FC8BB5} = {720F91AF-4B3C-47D9-A03B-017A37FC8BB5}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessEntities", "BusinessEntities\BusinessEntities.csproj", "{B2089EC0-695E-43D3-9647-B88011047772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessServices", "BusinessServices\BusinessServices.csproj", "{8BDAF6D9-CB9C-45DC-90F8-CADCBDB823C2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3A1C2E8A-D2E1-4A21-8414-1AA1BEBCBAFD} = {3A1C2E8A-D2E1-4A21-8414-1AA1BEBCBAFD}
+		{720F91AF-4B3C-47D9-A03B-017A37FC8BB5} = {720F91AF-4B3C-47D9-A03B-017A37FC8BB5}
+		{B2089EC0-695E-43D3-9647-B88011047772} = {B2089EC0-695E-43D3-9647-B88011047772}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyResolver", "DependencyResolver\DependencyResolver.csproj", "{720F91AF-4B3C-47D9-A03B-017A37FC8BB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +50,14 @@ Global
 		{B2089EC0-695E-43D3-9647-B88011047772}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2089EC0-695E-43D3-9647-B88011047772}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2089EC0-695E-43D3-9647-B88011047772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BDAF6D9-CB9C-45DC-90F8-CADCBDB823C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BDAF6D9-CB9C-45DC-90F8-CADCBDB823C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BDAF6D9-CB9C-45DC-90F8-CADCBDB823C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BDAF6D9-CB9C-45DC-90F8-CADCBDB823C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{720F91AF-4B3C-47D9-A03B-017A37FC8BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{720F91AF-4B3C-47D9-A03B-017A37FC8BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{720F91AF-4B3C-47D9-A03B-017A37FC8BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{720F91AF-4B3C-47D9-A03B-017A37FC8BB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

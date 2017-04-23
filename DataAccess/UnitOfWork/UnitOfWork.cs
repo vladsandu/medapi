@@ -6,6 +6,7 @@ using System.IO;
 using DataAccess.Entities;
 using DataAccess.Entities.Character;
 using DataAccess.Repository;
+using DataAccess.Entities.Contact;
 
 namespace DataAccess.UnitOfWork
 {
@@ -13,9 +14,14 @@ namespace DataAccess.UnitOfWork
     {
         #region Private member variables...
 
-        private readonly MedContext _context = null;
+        private readonly MedContext _context;
         private GenericRepository<Person> _personRepository;
-      
+        private GenericRepository<InsuranceStatus> _insuranceStatusRepository;
+        private GenericRepository<Nationality> _nationalityRepository;
+
+        private GenericRepository<City> _cityRepository;
+        private GenericRepository<Country> _countryRepository;
+        private GenericRepository<ContactDetails> _contactDetailsRepository;
         #endregion
 
         public UnitOfWork()
@@ -35,6 +41,56 @@ namespace DataAccess.UnitOfWork
                 if (_personRepository == null)
                     _personRepository = new GenericRepository<Person>(_context);
                 return _personRepository;
+            }
+        }
+
+        public GenericRepository<InsuranceStatus> InsuranceStatusRepository
+        {
+            get
+            {
+                if (_insuranceStatusRepository == null)
+                    _insuranceStatusRepository = new GenericRepository<InsuranceStatus>(_context);
+                return _insuranceStatusRepository;
+            }
+        }
+
+        public GenericRepository<Nationality> NationalityRepository
+        {
+            get
+            {
+                if (_nationalityRepository == null)
+                    _nationalityRepository = new GenericRepository<Nationality>(_context);
+                return _nationalityRepository;
+            }
+        }
+
+        public GenericRepository<City> CityRepository
+        {
+            get
+            {
+                if (_cityRepository == null)
+                    _cityRepository = new GenericRepository<City>(_context);
+                return _cityRepository;
+            }
+        }
+
+        public GenericRepository<Country> CountryRepository
+        {
+            get
+            {
+                if (_countryRepository == null)
+                    _countryRepository = new GenericRepository<Country>(_context);
+                return _countryRepository;
+            }
+        }
+
+        public GenericRepository<ContactDetails> ContactDetailsRepository
+        {
+            get
+            {
+                if (_contactDetailsRepository == null)
+                    _contactDetailsRepository = new GenericRepository<ContactDetails>(_context);
+                return _contactDetailsRepository;
             }
         }
         #endregion
