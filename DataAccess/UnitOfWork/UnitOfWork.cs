@@ -18,6 +18,7 @@ namespace DataAccess.UnitOfWork
         private GenericRepository<Person> _personRepository;
         private GenericRepository<InsuranceStatus> _insuranceStatusRepository;
         private GenericRepository<Nationality> _nationalityRepository;
+        private GenericRepository<Patient> _patientRepository;
 
         private GenericRepository<City> _cityRepository;
         private GenericRepository<Country> _countryRepository;
@@ -64,6 +65,15 @@ namespace DataAccess.UnitOfWork
             }
         }
 
+        public GenericRepository<Patient> PatientRepository
+        {
+            get
+            {
+                if (_patientRepository == null)
+                    _patientRepository = new GenericRepository<Patient>(_context);
+                return _patientRepository;
+            }
+        }
         public GenericRepository<City> CityRepository
         {
             get

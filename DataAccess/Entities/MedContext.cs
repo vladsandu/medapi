@@ -13,10 +13,9 @@ using DataAccess.Entities.Drug;
 
 namespace DataAccess.Entities
 {
-    public class MedContext : DbContext
-    {
+    public class MedContext : DbContext {
         public MedContext()
-            : base("name=MedContext")
+            : base("name=DefaultConnection")
         {
         }
 

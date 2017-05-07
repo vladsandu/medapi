@@ -9,12 +9,14 @@ namespace MedApi
 {
     public static class Bootstrapper
     {
+        public static IUnityContainer Container { get; set; }
         public static IUnityContainer Initialise()
         {
             var container = BuildUnityContainer();
 
             System.Web.Mvc.DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
+            Container = container;
             return container;
         }
 

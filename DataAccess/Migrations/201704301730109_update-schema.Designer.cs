@@ -7,13 +7,13 @@ namespace DataAccess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class UpdateSchema : IMigrationMetadata
+    public sealed partial class updateschema : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateSchema));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(updateschema));
         
         string IMigrationMetadata.Id
         {
-            get { return "201704081641124_UpdateSchema"; }
+            get { return "201704301730109_update-schema"; }
         }
         
         string IMigrationMetadata.Source

@@ -1,0 +1,182 @@
+User
+
+Character schema
+Person
+	- [pk] Id
+	- [fk] ContactDetailsId
+	- [fk] NationalityId
+	- [fk] InsuranceStatusId
+	- Cnp
+	- FirstName
+	- LastName
+	- DateOfBirth
+	- DateOfDeath
+	- Sex
+
+InsuranceStatus
+	- [pk] Id
+	- Name
+
+Nationality
+	- [pk] Id
+	- Name
+	- Code
+	
+Contact schema	
+ContactDetails
+	- [pk] Id
+	- [fk] CountryID
+	- [fk] CityId
+	- Address
+	- PostalCode
+	- PhoneNumber
+	- Email
+	
+City
+	- [pk] Id
+	- Name
+
+Country
+	- [pk] Id
+	- Name
+----------------------------------------------------------
+
+diagnosis.diagnosis
+	- [pk] Id
+	- [fk] ConditionId
+	- [fk] ExaminationId
+	- [Nullable] EndDate
+	- Observations
+	
+diagnosis.condition
+	- [pk] Id
+	- [fk] ConditionCategoryId
+	- [fk] TypeId
+	- Name
+diagnosis.condition_category
+	- [pk] Id
+	- Name
+	- Code
+diagonsis.type
+	- [pk] Id
+	- Name
+	
+center.medical_center
+	- [pk] Id
+	- [fk] ContactDetailsId
+	- [fk] TypeId
+	- Name
+	
+center.type
+	- [pk] Id
+	- Name
+-----------------------------------------------------------
+Staff
+
+Physician
+	- [pk] Id
+	- [fk] PersonId
+	- [fk] PhysicianGrade
+	- [fk] MedicalField
+	- [fk] ContractId
+	
+Contract
+	- [pk] Id
+	- StartDate
+	- EndDate
+	
+Physician_grade
+	- [pk] Id
+	- Name
+Medical_field
+	- [pk] Id
+	- Name
+-----------------------------------------------------------
+Patient
+	- [pk] Id
+	- [fk] PersonId
+	- [fk] MedicId
+	- [fk] CenterId
+	- StartDate
+	- EndDate
+-----------------------------------------------------------
+examination.examination
+	- [pk] Id
+	- [fk] PatientId
+	- [fk] ExaminationTypeId
+	- Date
+examination.examinationType
+	- [pk] Id
+	- Name
+examination.observation
+	- [pk] Id
+	- [fk] ExaminationId
+	- [fk] ObservationType
+	- Value
+examination.observationType
+	- [pk] Id
+	- Name
+-----------------------------------------------------------
+
+prescription.prescription
+	- [pk] Id
+	- [fk] ExaminationId
+	- [fk] PrescriptionTypeId
+	- [fk] PrescriptionStatusId
+	- Date
+	- Days
+prescription.prescriptionStatus
+	- [pk] Id
+	- Name
+prescription.prescription_type
+	- [pk] Id
+	- Name
+
+-----------------------------------------------------------
+drug.drug
+	- [pk] Id
+	- [fk] ActiveIngredientId
+	- [fk] BrandId
+	- [fk] AdministrationTypeId
+	- Name
+	- Dose
+	- Fractionable
+	- Cost
+	- CostCoveragePercentage
+drug.administration_type
+	- [pk] Id
+	- Name
+drug.active_ingredient
+	- [pk] Id
+	- [fk] ActiveIngredientTypeId
+	- Name
+drug.active_ingredient_type
+	- [pk] Id
+	- Name
+drug.brand
+	- [pk] Id
+	- [fk] ContactDetailsId
+	- Name
+drug.drug_prescription
+	- [pk] Id
+	- [fk] DrugId
+	- [fk] PrescriptionId
+	- [fk] DiagnosisId
+	- [fk] AdministrationSchemaId
+	- Quantity
+	- CostCoveragePercentage
+drug.administration_schema
+	- [pk] Id
+	- Schema
+-----------------------------------------------------------
+hospital.inpatient
+hospital.room
+hospital.block
+
+analysis
+analysis.analysis_type ???
+
+Nurse?
+
+appointment
+appointment_details

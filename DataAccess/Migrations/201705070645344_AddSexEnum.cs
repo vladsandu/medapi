@@ -3,16 +3,16 @@ namespace DataAccess.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class UpdateSchema : DbMigration
+    public partial class AddSexEnum : DbMigration
     {
         public override void Up()
         {
-            AlterColumn("Character.Person", "DateOfDeath", c => c.DateTime());
+            AlterColumn("Character.Person", "Sex", c => c.Int(nullable: false));
         }
         
         public override void Down()
         {
-            AlterColumn("Character.Person", "DateOfDeath", c => c.DateTime(nullable: false));
+            AlterColumn("Character.Person", "Sex", c => c.Byte(nullable: false));
         }
     }
 }

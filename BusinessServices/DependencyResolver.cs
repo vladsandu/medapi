@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessEntities.Character;
+using BusinessServices.Character;
 using DependencyResolver;
 
 namespace BusinessServices
@@ -14,7 +15,8 @@ namespace BusinessServices
     {
         public void SetUp(IRegisterComponent registerComponent)
         {
-            registerComponent.RegisterType<IGenericServices<NationalityEntity>, NationalityServices>();
+            registerComponent.RegisterType<IPersonServices, PersonServices>();
+            registerComponent.RegisterType<IPatientServices, PatientServices>();
         }
     }
 }

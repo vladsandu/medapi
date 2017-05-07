@@ -7,8 +7,8 @@ namespace BusinessServices {
         public void Initialize()
         {
             Mapper.Initialize(cfg => {
-                cfg.CreateMap<Nationality, NationalityEntity>();
-                cfg.CreateMap<NationalityEntity, Nationality>();
+                cfg.CreateMap<Person, PersonEntity>();
+                cfg.CreateMap<Patient, PatientEntity>();
             });
         }
     }

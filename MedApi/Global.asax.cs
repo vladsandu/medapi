@@ -14,6 +14,7 @@ namespace MedApi
     {
         protected void Application_Start()
         {
+            Bootstrapper.Initialise();
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
@@ -22,7 +23,6 @@ namespace MedApi
 
             MapInitializer mapInitializer = new MapInitializer();
             mapInitializer.Initialize();
-            Bootstrapper.Initialise();
         }
     }
 }

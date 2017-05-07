@@ -11,6 +11,7 @@ namespace DataAccess.UnitOfWork
         GenericRepository<Person> PersonRepository { get; }
         GenericRepository<InsuranceStatus> InsuranceStatusRepository { get; }
         GenericRepository<Nationality> NationalityRepository { get; }
+        GenericRepository<Patient> PatientRepository { get; }
 
         GenericRepository<City> CityRepository { get; }
         GenericRepository<Country> CountryRepository { get; }

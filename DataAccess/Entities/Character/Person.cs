@@ -1,15 +1,18 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using DataAccess.Entities.Contact;
 using System.ComponentModel.DataAnnotations.Schema;
+using BusinessEntities.Character;
 
 namespace DataAccess.Entities.Character
 {
-    [Table("InsuranceStatus", Schema = "Character")]
+    [Table("Person", Schema = "Character")]
     public class Person
     {
+        [Key]
         public int Id { get; set; }
-        public int Cnp { get; set; }
-        public byte Sex { get; set; }
+        public string Cnp { get; set; }
+        public Sex Sex { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }

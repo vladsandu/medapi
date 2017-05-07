@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using BusinessServices;
+using Unity.WebApi;
 
 namespace MedApi
 {
@@ -14,12 +15,13 @@ namespace MedApi
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.DependencyResolver = new UnityDependencyResolver(Bootstrapper.Container);
         }
     }
 }

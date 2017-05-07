@@ -45,10 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Character\IPatientServices.cs" />
+    <Compile Include="Character\IPersonServices.cs" />
+    <Compile Include="Character\PatientServices.cs" />
     <Compile Include="DependencyResolver.cs" />
     <Compile Include="IGenericServices.cs" />
-    <Compile Include="NationalityServices.cs" />
     <Compile Include="MapInitializer.cs" />
+    <Compile Include="Character\PersonServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

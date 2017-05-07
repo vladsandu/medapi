@@ -39,8 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Character\NationalityEntity.cs" />
+    <Compile Include="Character\PatientEntity.cs" />
     <Compile Include="Character\PersonEntity.cs" />
+    <Compile Include="Character\Sex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
