@@ -7,6 +7,7 @@ using DataAccess.Entities;
 using DataAccess.Entities.Character;
 using DataAccess.Repository;
 using DataAccess.Entities.Contact;
+using DataAccess.Entities.Staff;
 
 namespace DataAccess.UnitOfWork
 {
@@ -23,6 +24,8 @@ namespace DataAccess.UnitOfWork
         private GenericRepository<City> _cityRepository;
         private GenericRepository<Country> _countryRepository;
         private GenericRepository<ContactDetails> _contactDetailsRepository;
+
+        private GenericRepository<Staff> _staffRepository;
         #endregion
 
         public UnitOfWork()
@@ -42,6 +45,15 @@ namespace DataAccess.UnitOfWork
                 if (_personRepository == null)
                     _personRepository = new GenericRepository<Person>(_context);
                 return _personRepository;
+            }
+        }
+        public GenericRepository<Staff> StaffRepository
+        {
+            get
+            {
+                if (_staffRepository == null)
+                    _staffRepository = new GenericRepository<Staff>(_context);
+                return _staffRepository;
             }
         }
 

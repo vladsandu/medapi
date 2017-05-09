@@ -18,7 +18,7 @@ namespace MedApi.Controllers {
             {
                 UserName = createUserModel.Username,
                 Email = createUserModel.Email,
-                PersonId = createUserModel.PersonId
+                StaffId = createUserModel.StaffId
             };
 
             var addUserResult = await AppUserManager.CreateAsync(user, createUserModel.Password);

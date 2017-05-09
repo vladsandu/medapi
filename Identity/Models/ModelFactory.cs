@@ -27,7 +27,7 @@ namespace Identity.Models {
                 Email = appUser.Email,
                 Roles = _AppUserManager.GetRoles(appUser.Id),
                 Claims = _AppUserManager.GetClaims(appUser.Id),
-                PersonId = appUser.PersonId
+                StaffId = appUser.StaffId
             };
         }
     }
@@ -36,7 +36,7 @@ namespace Identity.Models {
     {
         public string Url { get; set; }
         public string Id { get; set; }
-        public int PersonId { get; set; }
+        public int StaffId { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
         public IList<string> Roles { get; set; }

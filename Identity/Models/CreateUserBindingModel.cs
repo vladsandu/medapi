@@ -12,8 +12,8 @@ namespace Identity.Models {
         public string Username { get; set; }
 
         [Required]
-        [Display(Name = "PersonId")]
-        public int PersonId { get; set; }
+        [Display(Name = "StaffId")]
+        public int StaffId { get; set; }
 
         [Display(Name = "Role Name")]
         public string RoleName { get; set; }

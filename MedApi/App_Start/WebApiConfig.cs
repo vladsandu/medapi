@@ -15,13 +15,12 @@ namespace MedApi
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+            config.DependencyResolver = new UnityDependencyResolver(Bootstrapper.Container);
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                defaults: new {id = RouteParameter.Optional}
             );
-
-            config.DependencyResolver = new UnityDependencyResolver(Bootstrapper.Container);
         }
     }
 }

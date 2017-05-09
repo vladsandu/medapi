@@ -20,7 +20,6 @@ namespace MedApi.Controllers
             _personServices = personServices;
         }
 
-
         [ResponseType(typeof(PersonEntity))]
         public HttpResponseMessage Get(string cnp)
         {

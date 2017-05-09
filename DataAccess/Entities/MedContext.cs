@@ -40,6 +40,8 @@ namespace DataAccess.Entities
         public DbSet<MedicalCenter> MedicalCenters { get; set; }
 
         //Staff
+        public DbSet<Staff.Staff> Staff { get; set; }
+        public DbSet<StaffType> StaffTypes { get; set; }
         public DbSet<Contract> Contracts { get; set; }
         public DbSet<MedicalField> MedicalFields { get; set; }
         public DbSet<Physician> Physicians { get; set; }

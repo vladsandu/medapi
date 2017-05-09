@@ -27,8 +27,6 @@ namespace MedApi {
             ConfigureWebApi(httpConfig);
 
             app.UseCors(CorsOptions.AllowAll);
-
-            app.UseWebApi(httpConfig);
         }
 
         private void ConfigureOAuthTokenGeneration(IAppBuilder app)

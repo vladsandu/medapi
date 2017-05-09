@@ -1,6 +1,7 @@
 ﻿using DataAccess.Entities;
 using DataAccess.Entities.Character;
 using DataAccess.Entities.Contact;
+using DataAccess.Entities.Staff;
 using DataAccess.Repository;
 
 namespace DataAccess.UnitOfWork
@@ -16,6 +17,8 @@ namespace DataAccess.UnitOfWork
         GenericRepository<City> CityRepository { get; }
         GenericRepository<Country> CountryRepository { get; }
         GenericRepository<ContactDetails> ContactDetailsRepository { get; }
+
+        GenericRepository<Staff> StaffRepository { get; }
         #endregion
 
         #region Public methods
