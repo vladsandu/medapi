@@ -7,6 +7,7 @@ using DataAccess.Entities;
 using DataAccess.Entities.Character;
 using DataAccess.Repository;
 using DataAccess.Entities.Contact;
+using DataAccess.Entities.Examination;
 using DataAccess.Entities.Staff;
 
 namespace DataAccess.UnitOfWork
@@ -25,7 +26,10 @@ namespace DataAccess.UnitOfWork
         private GenericRepository<Country> _countryRepository;
         private GenericRepository<ContactDetails> _contactDetailsRepository;
 
+        private GenericRepository<Examination> _examinationRepository;
         private GenericRepository<Staff> _staffRepository;
+        private GenericRepository<Physician> _physicianRepository;
+        private GenericRepository<ExaminationType> _examinationTypeRepository;
         #endregion
 
         public UnitOfWork()
@@ -56,7 +60,15 @@ namespace DataAccess.UnitOfWork
                 return _staffRepository;
             }
         }
-
+        public GenericRepository<Physician> PhysicianRepository
+        {
+            get
+            {
+                if (_physicianRepository == null)
+                    _physicianRepository = new GenericRepository<Physician>(_context);
+                return _physicianRepository;
+            }
+        }
         public GenericRepository<InsuranceStatus> InsuranceStatusRepository
         {
             get
@@ -74,6 +86,26 @@ namespace DataAccess.UnitOfWork
                 if (_nationalityRepository == null)
                     _nationalityRepository = new GenericRepository<Nationality>(_context);
                 return _nationalityRepository;
+            }
+        }
+
+        public GenericRepository<Examination> ExaminationRepository
+        {
+            get
+            {
+                if (_examinationRepository == null)
+                    _examinationRepository = new GenericRepository<Examination>(_context);
+                return _examinationRepository;
+            }
+        }
+
+        public GenericRepository<ExaminationType> ExaminationTypeRepository
+        {
+            get
+            {
+                if (_examinationTypeRepository == null)
+                    _examinationTypeRepository = new GenericRepository<ExaminationType>(_context);
+                return _examinationTypeRepository;
             }
         }
 

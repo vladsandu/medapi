@@ -14,7 +14,7 @@ namespace BusinessServices.Character {
             _unitOfWork = unitOfWork;
         }
 
-        public PersonEntity GetItemByCnp(string cnp)
+        public PersonEntity GetPersonByCnp(string cnp)
         {
             var person = _unitOfWork.PersonRepository.Get(newPerson => newPerson.Cnp.Equals(cnp));
             if (person != null)

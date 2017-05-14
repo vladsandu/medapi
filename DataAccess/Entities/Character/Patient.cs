@@ -21,6 +21,5 @@ namespace DataAccess.Entities.Character
 
         public virtual Person Person { get; set; }
         public virtual Physician Physician { get; set; }
-        public virtual MedicalCenter MedicalCenter { get; set; }
     }
 }

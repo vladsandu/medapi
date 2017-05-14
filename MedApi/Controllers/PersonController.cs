@@ -15,17 +15,18 @@ namespace MedApi.Controllers
     {
         private readonly IPersonServices _personServices;
 
-        public PersonController(IPersonServices personServices, IPatientServices patientServices)
+        public PersonController(IPersonServices personServices)
         {
             _personServices = personServices;
         }
 
         [ResponseType(typeof(PersonEntity))]
+        [Route("api/person")]
         public HttpResponseMessage Get(string cnp)
         {
             if (cnp.Length != 13)
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "CNP length incorrect");
-            var nationality = _personServices.GetItemByCnp(cnp);
+            var nationality = _personServices.GetPersonByCnp(cnp);
             if (nationality != null)
                 return Request.CreateResponse(HttpStatusCode.OK, nationality);
             return Request.CreateErrorResponse(HttpStatusCode.NotFound, "No person found for this cnp");

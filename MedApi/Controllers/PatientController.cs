@@ -7,7 +7,8 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
 using BusinessEntities.Character;
-using BusinessServices.Character;
+using BusinessEntities.Examination;
+using BusinessServices.Examination;
 using BusinessServices.Staff;
 using Identity;
 using Identity.Models;
@@ -16,30 +17,22 @@ using Microsoft.AspNet.Identity.Owin;
 
 namespace MedApi.Controllers
 {
-    [Authorize]
     public class PatientController : ApiController
     {
-        private readonly IPatientServices _patientServices;
-        private readonly IStaffServices _staffServices;
-
-        public PatientController(IPatientServices patientServices, IStaffServices staffServices)
+        private readonly IExaminationServices _examinationServices;
+        
+        public PatientController(IExaminationServices examinationServices)
         {
-            _patientServices = patientServices;
-            _staffServices = staffServices;
+            _examinationServices = examinationServices;
         }
 
-        [ResponseType(typeof(List<PatientEntity>))]
-        [Route("api/patient/")]
+        [ResponseType(typeof(List<ExaminationEntity>))]
+        [Route("api/patient/{id}/examinations")]
         [HttpGet]
-        public HttpResponseMessage Get()
+        public HttpResponseMessage GetExaminations(int id)
         {
-            ApiUser user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApiUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
-            var staffEntity =_staffServices.GetStaffById(user.StaffId);
-            var patients = _patientServices.GetPatients(staffEntity.ReferenceId);
-            if (patients != null)
-                return Request.CreateResponse(HttpStatusCode.OK, patients);
-            return Request.CreateErrorResponse(HttpStatusCode.NotFound, "No patients found for this medic id");
-
+            var examinations = _examinationServices.GetExaminationsForPatient(id);
+            return Request.CreateResponse(HttpStatusCode.OK, examinations);
         }
     }
 }

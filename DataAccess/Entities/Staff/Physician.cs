@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Entities.Center;
 
 namespace DataAccess.Entities.Staff
 {
@@ -19,5 +20,6 @@ namespace DataAccess.Entities.Staff
         public virtual PhysicianGrade PhysicianGrade { get; set; }
         public virtual MedicalField MedicalField { get; set; }
         public virtual Contract Contract { get; set; }
+        public virtual MedicalCenter MedicalCenter { get; set; }
     }
 }

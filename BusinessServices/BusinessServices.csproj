@@ -49,6 +49,8 @@
     <Compile Include="Character\IPersonServices.cs" />
     <Compile Include="Character\PatientServices.cs" />
     <Compile Include="DependencyResolver.cs" />
+    <Compile Include="Examination\ExaminationServices.cs" />
+    <Compile Include="Examination\IExaminationServices.cs" />
     <Compile Include="IGenericServices.cs" />
     <Compile Include="MapInitializer.cs" />
     <Compile Include="Character\PersonServices.cs" />

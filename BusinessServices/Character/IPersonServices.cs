@@ -2,6 +2,6 @@
 
 namespace BusinessServices.Character {
     public interface IPersonServices : IGenericServices<PersonEntity> {
-        PersonEntity GetItemByCnp(string cnp);
+        PersonEntity GetPersonByCnp(string cnp);
     }
 }
