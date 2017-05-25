@@ -1,7 +1,7 @@
 ﻿using BusinessEntities.Character;
 
 namespace BusinessServices.Character {
-    public interface IPersonServices : IGenericServices<PersonEntity> {
+    public interface IPersonServices {
         PersonEntity GetPersonByCnp(string cnp);
     }
 }

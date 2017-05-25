@@ -2,7 +2,6 @@
 
 namespace Identity.Models {
     public class CreateUserBindingModel {
-        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

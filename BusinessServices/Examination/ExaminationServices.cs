@@ -40,6 +40,11 @@ namespace BusinessServices.Examination {
             var examinations = _unitOfWork.ExaminationRepository.GetMany(examination => examination.Patient.Id == patientId);
             return examinations?.Select(Mapper.Map<DataAccess.Entities.Examination.Examination, ExaminationEntity>).ToList();
         }
+        public List<ExaminationEntity> GetExaminationsForPerson(string cnp)
+        {
+            var examinations = _unitOfWork.ExaminationRepository.GetMany(examination => examination.Patient.Person.Cnp == cnp);
+            return examinations?.Select(Mapper.Map<DataAccess.Entities.Examination.Examination, ExaminationEntity>).ToList();
+        }
 
         public List<ExaminationTypeEntity> GetExaminationTypes()
         {

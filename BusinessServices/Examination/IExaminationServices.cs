@@ -7,5 +7,6 @@ namespace BusinessServices.Examination {
         List<ExaminationEntity> GetExaminationsForMedic(int medicId);
         List<ExaminationTypeEntity> GetExaminationTypes();
         ExaminationEntity AddExaminationForPatient(int patientId, string examinationTypeName);
+        List<ExaminationEntity> GetExaminationsForPerson(string cnp);
     }
 }

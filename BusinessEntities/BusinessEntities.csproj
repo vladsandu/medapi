@@ -42,9 +42,16 @@
     <Compile Include="Character\PatientEntity.cs" />
     <Compile Include="Character\PersonEntity.cs" />
     <Compile Include="Character\Sex.cs" />
+    <Compile Include="Diagnosis\ConditionCategoryEntity.cs" />
+    <Compile Include="Diagnosis\ConditionEntity.cs" />
+    <Compile Include="Diagnosis\DiagnosisAddRequest.cs" />
+    <Compile Include="Diagnosis\DiagnosisEntity.cs" />
+    <Compile Include="Diagnosis\DiagnosisTypeEntity.cs" />
     <Compile Include="Examination\ExaminationEntity.cs" />
     <Compile Include="Examination\ExaminationTypeEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Center\MedicalCenterEntity.cs" />
+    <Compile Include="Staff\PhysicianEntity.cs" />
     <Compile Include="Staff\StaffEntity.cs" />
     <Compile Include="Staff\StaffTypeEntity.cs" />
   </ItemGroup>

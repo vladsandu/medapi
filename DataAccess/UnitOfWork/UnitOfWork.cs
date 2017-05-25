@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Data.Entity.Validation;
 using System.Diagnostics;
 using System.IO;
+using BusinessEntities.Diagnosis;
 using DataAccess.Entities;
 using DataAccess.Entities.Character;
 using DataAccess.Repository;
 using DataAccess.Entities.Contact;
+using DataAccess.Entities.Diagnosis;
 using DataAccess.Entities.Examination;
 using DataAccess.Entities.Staff;
 
@@ -30,6 +32,8 @@ namespace DataAccess.UnitOfWork
         private GenericRepository<Staff> _staffRepository;
         private GenericRepository<Physician> _physicianRepository;
         private GenericRepository<ExaminationType> _examinationTypeRepository;
+        private GenericRepository<Diagnosis> _diagnosisRepository;
+        private GenericRepository<Condition> _conditionRepository;
         #endregion
 
         public UnitOfWork()
@@ -67,6 +71,24 @@ namespace DataAccess.UnitOfWork
                 if (_physicianRepository == null)
                     _physicianRepository = new GenericRepository<Physician>(_context);
                 return _physicianRepository;
+            }
+        }
+        public GenericRepository<Diagnosis> DiagnosisRepository
+        {
+            get
+            {
+                if (_diagnosisRepository == null)
+                    _diagnosisRepository = new GenericRepository<Diagnosis>(_context);
+                return _diagnosisRepository;
+            }
+        }
+        public GenericRepository<Condition> ConditionRepository
+        {
+            get
+            {
+                if (_conditionRepository == null)
+                    _conditionRepository = new GenericRepository<Condition>(_context);
+                return _conditionRepository;
             }
         }
         public GenericRepository<InsuranceStatus> InsuranceStatusRepository
@@ -109,6 +131,7 @@ namespace DataAccess.UnitOfWork
             }
         }
 
+        
         public GenericRepository<Patient> PatientRepository
         {
             get

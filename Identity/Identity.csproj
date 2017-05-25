@@ -82,6 +82,18 @@
   <ItemGroup>
     <Compile Include="ApiUserManager.cs" />
     <Compile Include="IdentityContext.cs" />
+    <Compile Include="Migrations\201705201337106_MakeStaffIdNullable.cs" />
+    <Compile Include="Migrations\201705201337106_MakeStaffIdNullable.Designer.cs">
+      <DependentUpon>201705201337106_MakeStaffIdNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705201912572_NonNullifyStaffId.cs" />
+    <Compile Include="Migrations\201705201912572_NonNullifyStaffId.Designer.cs">
+      <DependentUpon>201705201912572_NonNullifyStaffId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705201914437_NonNullifyStaffId2.cs" />
+    <Compile Include="Migrations\201705201914437_NonNullifyStaffId2.Designer.cs">
+      <DependentUpon>201705201914437_NonNullifyStaffId2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApiUser.cs" />
     <Compile Include="Models\ChangePasswordBindingModel.cs" />
@@ -98,6 +110,17 @@
       <Project>{3A1C2E8A-D2E1-4A21-8414-1AA1BEBCBAFD}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705201337106_MakeStaffIdNullable.resx">
+      <DependentUpon>201705201337106_MakeStaffIdNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705201912572_NonNullifyStaffId.resx">
+      <DependentUpon>201705201912572_NonNullifyStaffId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705201914437_NonNullifyStaffId2.resx">
+      <DependentUpon>201705201914437_NonNullifyStaffId2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

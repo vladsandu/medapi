@@ -1,6 +1,8 @@
-﻿using DataAccess.Entities;
+﻿using BusinessEntities.Diagnosis;
+using DataAccess.Entities;
 using DataAccess.Entities.Character;
 using DataAccess.Entities.Contact;
+using DataAccess.Entities.Diagnosis;
 using DataAccess.Entities.Examination;
 using DataAccess.Entities.Staff;
 using DataAccess.Repository;
@@ -22,6 +24,8 @@ namespace DataAccess.UnitOfWork
         GenericRepository<Staff> StaffRepository { get; }
         GenericRepository<Physician> PhysicianRepository { get; }
         GenericRepository<ExaminationType> ExaminationTypeRepository { get; }
+        GenericRepository<Diagnosis> DiagnosisRepository { get; }
+        GenericRepository<Condition> ConditionRepository { get; }
 
         #endregion
 

@@ -225,11 +225,13 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\DiagnosisController.cs" />
     <Compile Include="Controllers\ExaminationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MedicController.cs" />
     <Compile Include="Controllers\PatientController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
+    <Compile Include="Controllers\TokenController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -306,6 +308,10 @@
     <ProjectReference Include="..\BusinessServices\BusinessServices.csproj">
       <Project>{8BDAF6D9-CB9C-45DC-90F8-CADCBDB823C2}</Project>
       <Name>BusinessServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{3A1C2E8A-D2E1-4A21-8414-1AA1BEBCBAFD}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\DependencyResolver\DependencyResolver.csproj">
       <Project>{720f91af-4b3c-47d9-a03b-017a37fc8bb5}</Project>

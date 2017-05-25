@@ -49,9 +49,12 @@
     <Compile Include="Character\IPersonServices.cs" />
     <Compile Include="Character\PatientServices.cs" />
     <Compile Include="DependencyResolver.cs" />
+    <Compile Include="Diagnosis\ConditionServices.cs" />
+    <Compile Include="Diagnosis\DiagnosisServices.cs" />
+    <Compile Include="Diagnosis\IConditionServices.cs" />
+    <Compile Include="Diagnosis\IDiagnosisServices.cs" />
     <Compile Include="Examination\ExaminationServices.cs" />
     <Compile Include="Examination\IExaminationServices.cs" />
-    <Compile Include="IGenericServices.cs" />
     <Compile Include="MapInitializer.cs" />
     <Compile Include="Character\PersonServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

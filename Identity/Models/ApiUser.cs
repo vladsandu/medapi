@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 namespace Identity.Models {
     public class ApiUser : IdentityUser{
         public int StaffId { get; set; }
-        public Staff Staff { get; set; }
+        public virtual Staff Staff { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApiUser> manager, string authenticationType)
         {
             var userIdentity = await manager.CreateIdentityAsync(this, authenticationType);
