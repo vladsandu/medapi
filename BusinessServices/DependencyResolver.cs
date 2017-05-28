@@ -8,6 +8,7 @@ using BusinessEntities.Character;
 using BusinessServices.Character;
 using BusinessServices.Diagnosis;
 using BusinessServices.Examination;
+using BusinessServices.Prescription;
 using BusinessServices.Staff;
 using DependencyResolver;
 
@@ -23,6 +24,7 @@ namespace BusinessServices
             registerComponent.RegisterType<IExaminationServices, ExaminationServices>();
             registerComponent.RegisterType<IConditionServices, ConditionServices>();
             registerComponent.RegisterType<IDiagnosisServices, DiagnosisServices>();
+            registerComponent.RegisterType<IPrescriptionServices, PrescriptionServices>();
             registerComponent.RegisterType<IStaffServices, StaffServices>();
         }
     }

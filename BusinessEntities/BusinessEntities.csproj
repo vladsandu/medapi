@@ -49,6 +49,9 @@
     <Compile Include="Diagnosis\DiagnosisTypeEntity.cs" />
     <Compile Include="Examination\ExaminationEntity.cs" />
     <Compile Include="Examination\ExaminationTypeEntity.cs" />
+    <Compile Include="Prescription\PrescriptionEntity.cs" />
+    <Compile Include="Prescription\PrescriptionStatusEntity.cs" />
+    <Compile Include="Prescription\PrescriptionTypeEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Center\MedicalCenterEntity.cs" />
     <Compile Include="Staff\PhysicianEntity.cs" />
