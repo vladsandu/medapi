@@ -4,6 +4,7 @@ using DataAccess.Entities.Character;
 using DataAccess.Entities.Contact;
 using DataAccess.Entities.Diagnosis;
 using DataAccess.Entities.Examination;
+using DataAccess.Entities.Prescription;
 using DataAccess.Entities.Staff;
 using DataAccess.Repository;
 
@@ -26,6 +27,10 @@ namespace DataAccess.UnitOfWork
         GenericRepository<ExaminationType> ExaminationTypeRepository { get; }
         GenericRepository<Diagnosis> DiagnosisRepository { get; }
         GenericRepository<Condition> ConditionRepository { get; }
+
+        GenericRepository<Prescription> PrescriptionRepository { get; }
+        GenericRepository<PrescriptionType> PrescriptionTypeRepository { get; }
+        GenericRepository<PrescriptionStatus> PrescriptionStatusRepository { get; }
 
         #endregion
 

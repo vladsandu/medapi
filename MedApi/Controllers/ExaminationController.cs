@@ -9,8 +9,10 @@ using System.Web.Http.Description;
 using BusinessEntities.Character;
 using BusinessEntities.Diagnosis;
 using BusinessEntities.Examination;
+using BusinessEntities.Prescription;
 using BusinessServices.Diagnosis;
 using BusinessServices.Examination;
+using BusinessServices.Prescription;
 using BusinessServices.Staff;
 using Identity;
 using Identity.Models;
@@ -24,12 +26,15 @@ namespace MedApi.Controllers
         private readonly IExaminationServices _examinationServices;
         private readonly IStaffServices _staffServices;
         private readonly IDiagnosisServices _diagnosisServices;
+        private readonly IPrescriptionServices _prescriptionServices;
 
-        public ExaminationController(IExaminationServices examinationServices, IStaffServices staffServices, IDiagnosisServices diagnosisServices)
+        public ExaminationController(IExaminationServices examinationServices, IStaffServices staffServices, 
+            IDiagnosisServices diagnosisServices, IPrescriptionServices prescriptionServices)
         {
             _examinationServices = examinationServices;
             _staffServices = staffServices;
             _diagnosisServices = diagnosisServices;
+            _prescriptionServices = prescriptionServices;
         }
 
         [ResponseType(typeof(List<ExaminationTypeEntity>))]
@@ -100,6 +105,25 @@ namespace MedApi.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
             }
             return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Could not get diagnostics");
+        }
+
+        [ResponseType(typeof(DiagnosisEntity))]
+        [Route("api/examination/prescription")]
+        [HttpPost]
+        [Authorize]
+        public HttpResponseMessage AddPrescription(PrescriptionAddRequest prescriptionAddRequest)
+        {
+            try
+            {
+                var prescription = _prescriptionServices.AddPrescriptionForExamination(prescriptionAddRequest);
+                if (prescription != null)
+                    return Request.CreateResponse(HttpStatusCode.OK, prescription);
+            }
+            catch (Exception e)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, e.Message);
+            }
+            return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Could not add prescription");
         }
     }
 }

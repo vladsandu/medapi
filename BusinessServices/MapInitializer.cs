@@ -2,6 +2,7 @@
 using BusinessEntities.Character;
 using BusinessEntities.Diagnosis;
 using BusinessEntities.Examination;
+using BusinessEntities.Prescription;
 using BusinessEntities.Staff;
 using DataAccess.Entities.Center;
 using DataAccess.Entities.Character;
@@ -22,6 +23,7 @@ namespace BusinessServices {
                 cfg.CreateMap<DataAccess.Entities.Diagnosis.Condition, ConditionEntity>();
                 cfg.CreateMap<DataAccess.Entities.Diagnosis.ConditionCategory, ConditionCategoryEntity>();
                 cfg.CreateMap<DataAccess.Entities.Diagnosis.DiagnosisType, DiagnosisTypeEntity>();
+                cfg.CreateMap<DataAccess.Entities.Prescription.Prescription, PrescriptionEntity>();
                 cfg.CreateMap<DataAccess.Entities.Diagnosis.Diagnosis, DiagnosisEntity>();
                 cfg.CreateMap<Physician, PhysicianEntity>();
                 cfg.CreateMap<MedicalCenter, MedicalCenterEntity>();

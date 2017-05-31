@@ -10,6 +10,7 @@ using DataAccess.Repository;
 using DataAccess.Entities.Contact;
 using DataAccess.Entities.Diagnosis;
 using DataAccess.Entities.Examination;
+using DataAccess.Entities.Prescription;
 using DataAccess.Entities.Staff;
 
 namespace DataAccess.UnitOfWork
@@ -29,9 +30,14 @@ namespace DataAccess.UnitOfWork
         private GenericRepository<ContactDetails> _contactDetailsRepository;
 
         private GenericRepository<Examination> _examinationRepository;
+        private GenericRepository<ExaminationType> _examinationTypeRepository;
+
+        private GenericRepository<Prescription> _prescriptionRepository;
+        private GenericRepository<PrescriptionType> _prescriptionTypeRepository;
+        private GenericRepository<PrescriptionStatus> _prescriptionStatusRepository;
+
         private GenericRepository<Staff> _staffRepository;
         private GenericRepository<Physician> _physicianRepository;
-        private GenericRepository<ExaminationType> _examinationTypeRepository;
         private GenericRepository<Diagnosis> _diagnosisRepository;
         private GenericRepository<Condition> _conditionRepository;
         #endregion
@@ -131,7 +137,36 @@ namespace DataAccess.UnitOfWork
             }
         }
 
-        
+        public GenericRepository<Prescription> PrescriptionRepository
+        {
+            get
+            {
+                if (_prescriptionRepository == null)
+                    _prescriptionRepository = new GenericRepository<Prescription>(_context);
+                return _prescriptionRepository;
+            }
+        }
+
+        public GenericRepository<PrescriptionType> PrescriptionTypeRepository
+        {
+            get
+            {
+                if (_prescriptionTypeRepository == null)
+                    _prescriptionTypeRepository = new GenericRepository<PrescriptionType>(_context);
+                return _prescriptionTypeRepository;
+            }
+        }
+
+        public GenericRepository<PrescriptionStatus> PrescriptionStatusRepository
+        {
+            get
+            {
+                if (_prescriptionStatusRepository == null)
+                    _prescriptionStatusRepository = new GenericRepository<PrescriptionStatus>(_context);
+                return _prescriptionStatusRepository;
+            }
+        }
+
         public GenericRepository<Patient> PatientRepository
         {
             get
